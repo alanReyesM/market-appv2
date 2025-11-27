@@ -343,9 +343,12 @@ if(!isset($_SESSION['session_user_id'])){
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <!--<span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                -->
+                                <?php echo $_SESSION['session_user_fulname'];?>
+                                <!--<img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">-->
+                                    <?php echo "<img src='". $_SESSION['session_user_url_photo']."' width='30'>";?>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
